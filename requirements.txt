@@ -2,7 +2,4 @@ gunicorn
 flask
 numpy
 pandas
-sklearn.preprocessing
-sklearn.model_selection
 sklearn
-sklearn.metrics
