@@ -3,3 +3,4 @@ flask
 numpy
 pandas
 sklearn
+flask_cors
