@@ -6,10 +6,10 @@ const Popup = ({ sentProps }) => {
         return <Slide direction="up" ref={ref} {...props} />
     })
     return (
-        <Dialog open={sentProps?.open} TransitionComponent={Transition} keepMounted onClose={() => sentProps?.setStates(prev => ({ ...prev, open: false }))}
+        <Dialog open={sentProps?.open} TransitionComponent={Transition} keepMounted onClose={() => sentProps?.setOpen(false)}
             aria-describedby="alert-dialog-slide-description"
         >
-            <DialogTitle sx={{ fontSize: { xs: '17px', md: '20px' } }}>{"Heart Disease Status Checker"}</DialogTitle>
+            <DialogTitle sx={{fontSize: {xs: '17px', md: '20px'}}}>{"Heart Disease Status Checker"}</DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
                     {sentProps?.message}
