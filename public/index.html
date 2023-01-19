@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/images/heart.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="This software checks the heart disease status of individuals using machine learning. By providing the individual's age, gender, fasting blood sugar result, information about electrocardiograph, serum cholesterol and other relevant health information, the software is able to indicate if the individual has heart disease or not."
+    />
+    <link rel="apple-touch-icon" type="image/jpeg" href="/images/heart_192.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Heart Disease Checker App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/serviceWorker.js').then(
+          reg => console.log('Success: ', reg.scope)
+        ).catch( err => console.log('Failure: ', err))
+      })
+    }
+  </script>
+</html>
